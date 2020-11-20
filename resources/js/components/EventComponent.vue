@@ -84,7 +84,7 @@ export default {
 
 		fetchEvents: function(){
 
-			fetch('api/events',
+			fetch('/api/events',
 			{
 				method: 'POST',
 				headers: new Headers({
@@ -114,7 +114,7 @@ export default {
 			}
 			console.log(event);
 			 axios
-				.post('http://localhost:8000/api/events/create', event)	
+				.post('/api/events/create', event)	
 				.then((res) => {
 					this.fetchEvents();
 					this.loadEvent(event);
