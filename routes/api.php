@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('events','EventsController@index');
+Route::get('events','EventsController@index');
 // Route::get('events', 'app\Http\Controllers\EventsController@index');
 // Route::group(['prefix' => 'event'], function () {
 //     Route::post('add', 'EventsController@add');
@@ -29,6 +29,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // });
 
 
-Route::get('events', [EventsController::class, 'index', 'https']);
+// Route::get('events', [EventsController::class, 'index', 'https']);
 Route::post('events/create', [EventsController::class, 'create', 'https']);
 
