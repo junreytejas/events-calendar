@@ -86,7 +86,7 @@ export default {
 
 			fetch('/api/events',
 			{
-				method: 'POST',
+				method: 'GET',
 				headers: new Headers({
 				'Content-Type': 'application/json',
     		     'Accept': 'application/json',
