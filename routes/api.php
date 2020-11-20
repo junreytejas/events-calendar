@@ -29,6 +29,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // });
 
 
-Route::middleware('api')->get('events', [EventsController::class, 'index', 'https']);
-Route::middleware('api')->post('events/create', [EventsController::class, 'create', 'https']);
+Route::middleware('api')->get('/events', [EventsController::class, 'index', 'https']);
+Route::middleware('api')->post('/events/create', [EventsController::class, 'create', 'https']);
 
