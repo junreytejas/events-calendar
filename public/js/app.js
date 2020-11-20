@@ -2048,7 +2048,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     fetchEvents: function fetchEvents() {
       var _this = this;
 
-      fetch('api/events').then(function (res) {
+      fetch('https://localhost:8000/api/events').then(function (res) {
         return res.json();
       }).then(function (data) {
         _this.savedEvents = data;
@@ -2068,7 +2068,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         daysOfWeek: this.daysOfWeek.toString()
       };
       console.log(event);
-      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('http://localhost:8000/api/events/create', event).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('https://localhost:8000/api/events/create', event).then(function (res) {
         _this2.fetchEvents();
 
         _this2.loadEvent(event);

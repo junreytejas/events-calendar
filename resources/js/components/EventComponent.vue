@@ -83,7 +83,7 @@ export default {
 		...mapActions(['setEvent']),
 
 		fetchEvents: function(){
-			fetch('api/events')
+			fetch('https://localhost:8000/api/events')
 			.then(res => res.json())
 			.then(data => {
 				this.savedEvents = data;
@@ -106,7 +106,7 @@ export default {
 			}
 			console.log(event);
 			 axios
-				.post('http://localhost:8000/api/events/create', event)	
+				.post('https://localhost:8000/api/events/create', event)	
 				.then((res) => {
 					this.fetchEvents();
 					this.loadEvent(event);
